@@ -1,0 +1,38 @@
+.logo-wrapper {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.logo-wrapper .row {
+  align-items: center;
+}
+
+.logo-wrapper .logo {
+  height: 80px;
+}
+
+.sfFormWrapper {
+  margin-top: 20px;
+}
+
+.content-wrapper {
+  margin-top: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-bar-wrapper {
+  padding: 0  0 20px 0 !important;
+  text-align: right;
+}
+
+.nav-bar-wrapper span {
+  width: 100px;
+}
