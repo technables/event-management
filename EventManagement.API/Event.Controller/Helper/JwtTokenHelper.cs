@@ -21,7 +21,7 @@ namespace Event.Controller.Helper
             return Guid.NewGuid().ToString().Replace("-", "");
         }
 
-        private AuthInfo GenerateUserToken(UserInfo user)
+        public UserInfo GenerateUserToken(UserInfo user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(secret);

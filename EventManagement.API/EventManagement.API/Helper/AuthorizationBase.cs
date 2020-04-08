@@ -9,8 +9,6 @@ using EventManagement.API.Helper;
 namespace EventManagement.API
 {
     [TypeFilter(typeof(AuthorizeAnonymousAttribute))]
-    [ApiController]
-    [Route("api/[controller]")]
     public class AuthorizationBase : ControllerBase
     {
     }

@@ -1,4 +1,5 @@
 import Home from "../components/views/Home";
+import Login from "../components/views/Login";
 
 import {
   ROUTE_SITE_ROOT,
@@ -9,6 +10,7 @@ import {
   ROUTE_MERCHANT_PROFILE,
   ROUTE_USER_DASHBOARD,
   ROUTE_USER_PROFILE,
+  ROUTE_SITE_LOGIN,
 } from "../data/constants/routenames";
 
 export const DefaultRoutes = [
@@ -23,6 +25,12 @@ export const DefaultRoutes = [
     exact: true,
     name: "events",
     component: Home,
+  },
+  {
+    path: ROUTE_SITE_LOGIN,
+    exact: true,
+    name: "login",
+    component: Login,
   },
 ];
 

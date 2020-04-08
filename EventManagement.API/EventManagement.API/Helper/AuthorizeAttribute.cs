@@ -17,9 +17,9 @@ namespace EventManagement.API.Helper
         {
             try
             {
-                string clientID = context.HttpContext.Request?.Headers["clientID"];
+                string clientID = context.HttpContext.Request?.Headers["ClientCode"];
 
-                if (clientID != "event")
+                if (clientID != "event-management")
                 {
                     context.Result = new UnauthorizedObjectResult(new UserAuthenticateResponse
                     {

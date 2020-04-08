@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Event.Entity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,6 @@ namespace Event.Services
 {
     public interface IUserService
     {
-        public int Authenticate(string username, string password);
+        public UserInfo Authenticate(string username, string password);
     }
 }

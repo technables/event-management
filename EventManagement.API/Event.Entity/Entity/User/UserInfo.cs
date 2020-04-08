@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Event.Entity
 {
-    public class AuthInfo 
+    public class AuthInfo
     {
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Salt { get; set; }
     }
 
-    public class UserInfo: AuthInfo
+    public class UserInfo : AuthInfo
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -22,14 +22,4 @@ namespace Event.Entity
     }
 
     
-
-    public class ProfileInfo : UserInfo
-    {
-        public string FullName { get; set; }
-        public int Age { get; set; }
-        public string ImageUrl { get; set; }
-
-        public string Gender { get; set; }
-        public string ContactNumber { get; set; }
-    }
 }

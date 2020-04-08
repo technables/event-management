@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import Logo from "../../../logo.svg";
 
-import { connect, useSelector } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
 import "./header.css";
-const Header = () => {
+import { ROUTE_SITE_LOGIN } from "../../../data/constants/routenames";
+import history from '../History'
+import { logout } from "../../../data/services/actionlist/authAction";
+const Header = (props) => {
   const logoClick = () => {};
 
-  const btnClick = () => {};
+  const dispatch = useDispatch();
+
+  const btnClick = () => {
+    history.push(ROUTE_SITE_LOGIN);
+  };
 
   const LogoutClick = () => {
-    const { dispatch, history } = this.props;
-    //dispatch(actionList.logout(history));
+    dispatch(logout());
   };
 
   const auth = useSelector((state) => state.authReducer);
@@ -27,7 +33,7 @@ const Header = () => {
           />
           <span className="h3">Event Management</span>
         </div>
-        {!auth.isAuthenticated  && (
+        {!auth.isAuthenticated && (
           <div className="col-4 text-right">
             <span className="btn btn-info" onClick={btnClick}>
               Login
@@ -41,9 +47,7 @@ const Header = () => {
               <p className="font-italic font-weight-normal col-6 spnUserName">
                 Welcome {auth.userRole}
               </p>
-              <span className="btn btn-warning " >
-                Logout
-              </span>
+              <span className="btn btn-warning " onClick={LogoutClick}>Logout</span>
             </div>
           </div>
         )}

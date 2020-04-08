@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Event.Entity;
 using Event.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventManagement.API.Controllers
 {
+    [Route("api/v1/[controller]/[action]")]
+    [ApiController]
     public class UserController : AuthorizationBase
     {
 
@@ -21,13 +24,7 @@ namespace EventManagement.API.Controllers
 
 
         // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            int result = _userService.Authenticate("admin", "admin");
-            return new string[] { "value1", "value2", result.ToString() };
-        }
 
-
+       
     }
 }

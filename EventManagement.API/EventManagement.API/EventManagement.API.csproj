@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include=".well-known\acme-challenge\technables.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".well-known\acme-challenge\GjYGOVjslfoGCUWcCuZTU0Cf1E6hN_TBYRvYTrfuuto" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.3.1" />
@@ -13,6 +21,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Event.Entity\Event.Entity.csproj" />
     <ProjectReference Include="..\Event.Services\Event.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="technables.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 

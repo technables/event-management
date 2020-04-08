@@ -16,12 +16,13 @@ import {
 const MenuBar = () => {
   const auth = useSelector((state) => state.authReducer);
 
+
   const guestLinks = () => {
     return (
       <ul className="navbar-nav">
         <li className="nav-item active">
           <NavLink className="nav-link" to={ROUTE_SITE_ROOT}>
-            Home <span className="sr-only">(current)</span>
+            Home 
           </NavLink>
         </li>
         <li className="nav-item">
