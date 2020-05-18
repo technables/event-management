@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\CampaignController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include=".well-known\acme-challenge\technables.jpg" />
   </ItemGroup>
 
@@ -14,6 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.3.1" />
   </ItemGroup>

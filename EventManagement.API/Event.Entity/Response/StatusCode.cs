@@ -5,19 +5,19 @@ namespace Event.Entity
     /// <summary>
     /// StatusCode
     /// </summary>
-    public enum StatusCode 
+    public enum StatusCode
     {
-        Created=1,
-        NotExists =2,
+        Created = 1,
+        NotExists = 2,
         Updated = 3,
-        Deleted =4,
+        Deleted = 4,
         TokenExpired = 5,
-        FieldMissing=6,
-        DuplicateItem=7,
-        NotAllowed=8,
+        FieldMissing = 6,
+        DuplicateItem = 7,
+        NotAllowed = 8,
         ServerError = 500,
-        Ok=200,
-        
+        Ok = 200,
+
         //
         // Summary:
         //     Equivalent to HTTP status 400. System.Net.HttpStatusCode.BadRequest indicates
